@@ -1,0 +1,14 @@
+{
+  "name": "jslearn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "cr6588 <cr6588@vip.qq.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "description": "",
+  "devDependencies": {}
+}
