@@ -1,14 +1,14 @@
 <template>
   <div id="app" class="login-box">
-    <Login v-if="action === 'login'"></Login>
-    <Regis v-else></Regis>
-    <div v-if="action === 'login'">
-      <el-button type="primary">登录</el-button>
+    <Login v-show="action === 'login'"></Login>
+    <Regis v-show="action === 'regis'"></Regis>
+    <div v-show="action === 'login'">
+      <el-button type="primary" v-on:click="login">登录</el-button>
       <el-button type="primary" v-on:click="action='regis'">免费注册点这里</el-button>
     </div>
-    <div v-if="action === 'regis'">
+    <div v-show="action === 'regis'">
+      <el-button type="primary" v-on:click="regis">注册</el-button>
       <el-button type="primary" v-on:click="action='login'">已有账号，点击登录</el-button>
-      <el-button type="primary">注册</el-button>
     </div>
   </div>
 </template>
@@ -23,9 +23,22 @@ export default {
     Login,
     Regis
   },
-  data : () => {
+  data: () => {
     return {
       action: 'login'
+    }
+  },
+  methods: {
+    regis: (event) => {
+      // `this` 在方法里指向当前 Vue 实例
+      alert('Hello ' + this.name + '!')
+      // `event` 是原生 DOM 事件
+      if (event) {
+        alert(event.target.tagName)
+      }
+    },
+    login: (event) => {
+      console.log("ss")
     }
   }
 }
