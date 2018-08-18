@@ -7,7 +7,7 @@
     </div>
     <div>
         <el-button type="primary">登录</el-button>
-        <el-button type="primary" v-on:click="actionToRegis">免费注册点这里</el-button>
+        <el-button type="primary" v-on:click="$emit('actionToRegis')">免费注册点这里</el-button>
     </div>
 </div>
 </template>
@@ -15,9 +15,6 @@
 export default {
   name: 'login',
   methods: {
-      actionToRegis: function (e) {
-          this.$parent.action = 'regis'
-      }
   }
 }
 </script>

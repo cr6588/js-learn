@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="login-box">
-    <Login v-show="action === 'login'"></Login>
-    <Regis v-show="action === 'regis'"></Regis>
+    <Login v-show="action === 'login'" v-on:actionToRegis="action = 'regis'"></Login>
+    <Regis v-show="action === 'regis'" v-on:actionToLogin="action = 'login'"></Regis>
   </div>
 </template>
 
