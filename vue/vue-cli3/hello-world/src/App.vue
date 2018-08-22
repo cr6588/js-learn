@@ -34,9 +34,9 @@ export default {
 }
 .login-box {
     margin: 0 auto;
-    width: 290px;
+    width: 350px;
     background: #ebf1f6;
     height: 360px;
-    padding: 50px 35px 0px 35px;
+    padding: 20px 35px 0px 35px;
 }
 </style>
